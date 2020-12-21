@@ -1,0 +1,52 @@
+https://github.com/vdhul1/casestudy-gitworkflow
+
+git init
+git remote add origin https://github.com/vdhul1/casestudy-gitworkflow.git
+git remote
+nano main.c
+ls
+git status
+git add .
+git commit -m "1st commit in master"
+git branch
+git branch dev1
+git branch dev2
+git branch qa
+git branch release
+git branch
+git checkout dev1
+ls
+nano feature1.c
+git status
+git add .
+git commit -m "first commit from dev1"
+git checkout dev2
+nano feature2.c
+git status
+git add .
+git commit -m "first commit fromn dev2 branch"
+git checkout qa
+git merge dev1
+git merge dev2
+ls
+git checkout dev1
+git status
+git add .
+git commit -m "second commit from dev1"
+git checkout qa
+ls
+git checkout release
+git merge qa
+ls
+git checkout master
+git merge release
+ls
+git branch hotfix
+ls
+nano feature2.c
+git status
+git commit -m "bugs fixed in feature2.c from hotfix branch"
+git add .
+git commit -m "bugs fixed in feature2.c from hotfix branch"
+ls
+git push origin master dev1 dev2 qa release hotfix
